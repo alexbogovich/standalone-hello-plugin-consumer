@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath group: 'com.github.alexbogovich', name: 'standalone-hello-plugin',
+            version: '1.0-SNAPSHOT'
+    }
+}
+apply plugin: 'com.github.alexbogovich.plugin.greeting'
+apply plugin: 'java'
+
+group 'com.github.alexbogovich'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+
+task greetAlex(type: com.github.alexbogovich.plugin.greeting.GreetingTask) {
+    who = 'Alex'
+}
