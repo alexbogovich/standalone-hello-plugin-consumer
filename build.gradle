@@ -3,11 +3,11 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath group: 'com.github.alexbogovich', name: 'standalone-hello-plugin',
-            version: '1.0-SNAPSHOT'
+        classpath 'com.github.alexbogovich:standalone-hello-plugin:1.0-SNAPSHOT'
     }
 }
-apply plugin: 'com.github.alexbogovich.plugin.greeting'
+
+apply plugin: 'com.github.alexbogovich.hello-plugin'
 apply plugin: 'java'
 
 group 'com.github.alexbogovich'
