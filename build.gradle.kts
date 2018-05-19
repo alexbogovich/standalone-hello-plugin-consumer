@@ -1,3 +1,5 @@
+import com.github.alexbogovich.plugin.greeting.GreetingTask
+
 buildscript {
     repositories {
         jcenter()
@@ -25,3 +27,7 @@ java {
 
 group   = "com.github.alexbogovich"
 version = "1.0-SNAPSHOT"
+
+task(name = "greetingAlex", type = GreetingTask::class) {
+    who = "Alex"
+}
